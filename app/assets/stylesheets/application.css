@@ -1,0 +1,231 @@
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f253d;
+  display: flex;
+  justify-content: center;
+}
+
+.app-container {
+  width: 480px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  min-height: 90vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.splash-page {
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.splash-page h1 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #434b54;
+}
+
+/* Sign out */
+
+/* .splash-btn-div {
+  margin-top: 10%;
+} */
+
+.signup-link,
+.login-link {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #3778c2;
+  width: 80%;
+  text-align: center;
+}
+
+.signup-link:hover,
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.group-header,
+.new-group,
+.entity-header {
+  position: relative;
+}
+
+.logout {
+  position: absolute;
+  right: 20px;
+  color: white;
+}
+
+/* entity header */
+
+.entity-header,
+.new-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 15px 0 15px 0;
+  background-color: #3778c2;
+  padding: 20px;
+}
+
+.entity-header h1,
+.new-group h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: white;
+  padding-left: 30%;
+  font-weight: 300;
+}
+
+.entity > p {
+  padding-left: 25px;
+}
+
+.group-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3778c2;
+  padding: 20px;
+  color: white;
+  border-radius: 15px 0 15px 0;
+  font-weight: 300;
+}
+
+.group-header h1,
+.entity-header h1 {
+  font-weight: 300;
+}
+
+.group-container,
+.transaction-list,
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  margin: 10px 20px;
+  background-color: white;
+  padding: 5px 20px;
+}
+
+.group-container div > p {
+  font-weight: 300;
+  color: #434b54;
+}
+
+.total-amount {
+  margin: 10px 0;
+}
+
+.transaction-list p:nth-child(even),
+.total-amount p:nth-child(even) {
+  font-weight: bold;
+}
+
+.group-container p:nth-child(3) {
+  font-weight: bold;
+}
+
+.group-img {
+  width: 100px;
+}
+
+/* add new button */
+
+.button-div {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0;
+  background-color: #4caf50;
+}
+
+.button-div a {
+  display: inline-block;
+  color: white;
+  padding: 10px 30%;
+  border: 1px solid white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* form css */
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.form-render {
+  padding: 5px 20px;
+}
+
+.form-group,
+.field {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group textarea,
+.form-group .number_field,
+.field input {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.form-group input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Back button */
+
+.back-link {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.back-link a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button-div a:hover {
+  background-color: #45a049;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+#groups > a {
+  color: black;
+}

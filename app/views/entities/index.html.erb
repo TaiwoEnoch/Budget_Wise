@@ -1,0 +1,35 @@
+<div class="entity-header">
+
+  <div class="back-link">
+    <%= link_to "Back", root_path %>
+  </div>
+  <h1>Transactions</h1>
+  <% if user_signed_in? %>
+    <%= link_to "Logout", sign_out_user_path, class: "logout", method: :get %>
+  <% end %>
+</div>
+<div class="total-amount">
+  <p>Total amount</p>
+  <p>$<%= @entities.sum(:amount).to_i %></p>
+</div>
+<div id="entities" class="entity">
+  <% if @entities.present? %>
+
+    <% @entities.each do |entity| %>
+      <div class="transaction-list">
+        <p>
+          <%= entity.name %>
+        </p>
+
+        <p>
+          $<%= entity.amount %>
+        </p>
+      </div>
+    <% end %>
+  <% else %>
+    <p>No Transactions available.</p>
+  <% end %>
+</div>
+<div class="button-div">
+  <%= link_to "add a new transaction", new_group_entity_path %>
+</div>

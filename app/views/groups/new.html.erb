@@ -1,0 +1,14 @@
+<div class="new-group">
+
+  <div class="back-link">
+    <%= link_to "Back", groups_path %>
+  </div>
+  <h1>New Category</h1>
+    <% if user_signed_in? %>
+    <%= link_to "Logout", sign_out_user_path, class:"logout", method: :get %>
+  <% end %>
+
+</div>
+<div class="form-render">
+  <%= render "form", group: @group %>
+</div>

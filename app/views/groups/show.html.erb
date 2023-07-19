@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="entities">
+  <% @group.each do |entity| %>
+    <p><%= entity.name %></p>
+    <p>
+      Hi
+    </p>
+    <%= button_to "Destroy this group", @entity, method: :delete %>
+  <% end %>
+</div>
+
+<div>
+  <%= link_to "Edit this group", edit_group_path(@group) %>
+  |
+  <%= link_to "Back to groups", groups_path %>
+
+</div>

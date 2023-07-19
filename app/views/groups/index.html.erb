@@ -1,0 +1,38 @@
+<div class="group-header">
+  <h1>Categories</h1>
+  <% if user_signed_in? %>
+    <%= link_to "Logout", sign_out_user_path, class: "logout", method: :get %>
+  <% end %>
+</div>
+
+<div id="groups">
+  <% if @groups.present? %>
+    <% @groups.each do |group| %>
+      <%= link_to group_entities_path(group) do %>
+        <div class="group-container">
+
+          <%= image_tag url_for(group.icon), class: "group-img" if group.icon.attached? %>
+          <div>
+
+            <p>
+
+              <%= group.name %>
+            </p>
+
+            <p>
+              <%= group.created_at.strftime("%d %B %Y") %>
+            </p>
+          </div>
+
+          <p class="ingredients-total">$
+            <%= group.entities.sum(:amount).to_i %></p>
+        </div>
+      <% end %>
+    <% end %>
+  <% else %>
+    <p>No Category available.</p>
+  <% end %>
+  <div class="button-div">
+    <%= link_to "Add a new category", new_group_path, class: "button" %>
+  </div>
+</div>

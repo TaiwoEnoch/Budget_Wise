@@ -1,0 +1,12 @@
+<% if @user %>
+  <p style="color: green"><%= notice %></p>
+
+  <%= render @user %>
+
+  <div>
+    <%= link_to "Edit this user", edit_user_path(@user) %> |
+    <!-- Other actions or links -->
+  </div>
+<% else %>
+  <p>User not found.</p>
+<% end %>
